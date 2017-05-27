@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			document.write("<table border='1' align='center' cellpadding='20' cellspacing='0'>")
+			var i = 0;
+			while(i < 100) {
+				if (i%10==0) {
+					document.write("<tr>")
+				}
+				document.write("<td>"+i+"</td>")
+				i++;
+				if (1%10==0){
+				document.write("</tr>")
+				}
+			}
+			document.write('</table>')
+		</script>
+		<div style="width: 200px ;height: 200px; background: red;"></div>
+		<script type="text/javascript">
+			document.write("<div style='width: 100px;height: 100px;background: green;'></div>")
+		</script>
+	</body>
+</html>
+<!--
+	使用document》write输出内容时，如果样式不用style指定，各个属性
+	之间用空格分隔开，例如
+	document.write("<table border='1' align='center' cellpadding='20' cellspacing='0'>"
+-->

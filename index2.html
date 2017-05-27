@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var a = 0;
+//			for (var i = 0; i < 10; i++) {
+//				a += 0.1;
+//			}
+//			alert(a);//0.999999999999 
+			//浮点数是不精确的
+			alert(4/-3);//结果的符号只和前面的数有关
+			var a = 3;
+			var b = 4;
+			//出错，Invalid left-hand side in assignment
+			if (a=5 ||b=5){
+				a ++;
+				b ++;
+			}
+			alert(a)
+			alert(b)
+		</script>
+	</body>
+</html>
