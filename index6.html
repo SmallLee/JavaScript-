@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			//定义对象
+//			function Play(){
+//				
+//			}
+//			var play = new Play();
+//			play.address="shanghai";
+//			play.study = function(){
+//				alert("study");
+//			}
+//			play.study();
+//			//===================
+//			function Play2() {
+//				var p = new Object();
+//				p.age=12;
+//				p.eat = function(){
+//					alert('eat')
+//				}
+//				return p;
+//			}
+//			var p2 = new Play2();
+//			p2.eat()
+//			//====================
+//			function Run(width,height,num){
+//				this.width = width;
+//				this.height = height;
+//				this.num = num;
+//				this.run = function(){
+//					alert(this.num)
+//				}
+//			}
+//			var r = new Run(20,10,2);
+//			r.run();
+			//==================
+			var person = {
+				name:'lxn',
+				age:12,
+				address:'beijing',
+				get : function(){
+					alert(11);
+				}
+			}
+			//with 语句用于设置代码在特定对象中的作用域
+			with(person){
+			alert(address)
+			person.get()
+		}
+
+//==============遍历对象
+			for (var p in person) {
+				document.write(person[p]+"<br/>")
+				/*
+				  lxn
+				  12
+				  beijing
+				  function (){ alert(11); }
+				 */
+			} 
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//全局函数只有在浏览器关闭之后才会结束
+			function num(a,b,c){
+				if(typeof(a)=="undefined") {
+					a =1;
+				}
+				if(typeof(b)=="undefined") {
+					b =1;
+				}
+				if(typeof(c)=="undefined") {
+					c=2;
+				}
+				alert(a+"--"+b+"--"+c)
+			}
+			num()
+			function test(){
+				alert(arguments[3])//5
+			}
+			test(1,2,3,4,5)
+			//编码
+			document.write(escape("你好"));
+			//解码
+			document.write(unescape("%u4F60%u597D"))
+			eval("alert('haha')")
+			eval("prompt('adf')")
+			alert(parseInt("12avc"))//12
+		</script>
+	</body>
+</html>
+<!--
+	escape():该方法不会对 ASCII 字母和数字进行编码，也不会对下面这些 ASCII 
+	标点符号进行编码： * @ - _ + . / 。
+	其他所有的字符都会被转义序列替换
+	
+	parseInt:如果字符串的第一个字符不能被转换为数字，那么 parseFloat() 会返回 NaN。
+	
+-->
