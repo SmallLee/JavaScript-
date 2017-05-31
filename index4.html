@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title> 
+	</head>
+	<body>
+		<script type="text/javascript">
+			test(1,2);
+			function test(a,b){
+				alert(a+'=='+b)
+			} 
+			alert(test);//打印函数声明
+			var func = function(){
+				alert('aa');
+			}
+			func();
+			//回调函数
+			function demo(x,y,check){
+				if (check(3)) {
+					alert(x+y+'check');
+				}
+			}
+			demo(2,3,function(num){
+				if (num%3==0){
+					return true;
+				}
+				return false;
+			})
+		</script>
+	</body>
+</html>
