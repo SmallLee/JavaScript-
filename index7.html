@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//创建对象
+//			var demo = function(x,y){
+//				return x + y;
+//			}
+//			alert((2,3))
+//			创建方法
+			var demo = new Function("x","y","return x + y");
+			alert(demo(2,3))//5
+			//数字的最大值
+			alert(Number.MAX_VALUE)
+			var reg = /^a/i;
+			alert(reg.exec('bv'))//null
+			var str = "abcd"
+			alert(str.match(reg))//a
+		</script>
+	</body>
+</html>
