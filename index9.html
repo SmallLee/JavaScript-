@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr=[3,1,2,4,9,6,8,5];
+			//自定排序规则
+			arr.sort(function(x,y){
+				if (x>y){
+					return -1
+				} else if(x <y) {
+					return 1
+				} else {
+					return 0;
+				}
+			});
+			document.write(arr)
+		</script>
+	</body>
+</html>
