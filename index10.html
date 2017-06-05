@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<div class="content"></div>
+		<a id="alink" href="http://www.baidu.com" title="baidu">百度一下</a>
+		<input type="button" name="" id="btn" value="按钮" />
+		<script type="text/javascript">
+//		var objs = document.getElementsByTagName("div");
+//		document.write(objs)//object HTMLCollection
+//		var objs2 = document.getElementById("app");
+//		document.write(objs2)//object HTMLDivElement
+//		var objs3= document.getElementsByName("div");
+//		document.write(objs3)//object NodeList
+		var alink = document.getElementById("alink");
+		alink.innerHTML="<a>你好</a>"
+		alink.innerText="<a>你好</a>"
+		var btn = document.getElementById("btn");
+		//表单要使用value
+		alert(btn.value)
+		
+		btn.style.color = "red"
+
+		</script> 
+	</body>
+</html>
