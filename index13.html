@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#content{
+				
+			}
+		</style>
+	</head>
+	<body id="main">
+		<div id="container">
+			<h2>我是h2标签</h2>
+			<h3>我是h3标签</h3>
+		</div>
+		<div id="content">
+			<input type="button" name="" id="del" value="删除" />
+		</div>
+		<script type="text/javascript">
+			var container = document.getElementById("container");
+//			alert(container.nodeType)//1
+//			alert(container.nodeName)//DIV
+//			alert(container.nodeValue)//null，元素节点没有节点值
+//			alert(container.parentNode.nodeName);//BODY
+//			alert(container.childNodes[1].innerHTML)//我是h2标签
+//			alert(container.nextSibling.nextSibling.nodeName)//DIV
+			container.removeChild(container.childNodes[1])
+			//创建一个元素节点
+			var element = document.createElement("a");
+			//创建文本节点
+			var textNode = document.createTextNode("hello");
+			//设置属性
+			element.setAttribute("onclick","javaScript:alert('dd')");
+			element.setAttribute("href","https://www.baidu.com");
+			//设置样式
+			element.setAttribute("style","font-size: 30px;");
+			//设置字体
+//			element.style.fontSize = "50px"
+			//将文本节点添加到元素节点中
+			element.appendChild(textNode)
+			container.appendChild(element)
+			//========================
+			
+			document.getElementById('del').onclick = function(){
+				container.removeChild(element)
+			}
+		</script>
+	</body>
+</html>
+<!--
+	元素类型		节点类型(nodeType)		节点名称
+	元素				1
+	属性				2
+	文本				3				#text
+	注释				8
+	文档				9
+	
+	获取元素节点的值，用innerHTML
+	获取文本节点的值
+-->

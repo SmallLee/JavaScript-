@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="frm1">
+			
+			<input type="text" value="a" name="username"/>
+		</form>
+		<div id="app">
+			
+		</div>
+		<script type="text/javascript">
+			for (var d in document) {
+				document.write("document."+d +"="+document[d]+"<br/>")
+			}
+			//页面有多少个标签
+			alert(document.all.length)
+			//有多少个script
+			alert(document.scripts.length)
+			alert(document.style.length)
+			alert(document.frm1.username.value)
+		</script>
+	</body>
+</html>

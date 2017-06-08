@@ -3,6 +3,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			#btn{
+
+			}
+			.test{
+				width: 200px;
+				height: 100px;
+				font-size: 10px;
+			}
+		</style>
 	</head>
 	<body>
 		<div id="app"></div>
@@ -22,9 +32,22 @@
 		var btn = document.getElementById("btn");
 		//表单要使用value
 		alert(btn.value)
-		
 		btn.style.color = "red"
-
+		alert(btn.style.color)//red
+		alert(btn.offsetWidth)//px
+		//设定多个样式
+		btn.className = "test"
+		//获取a标签中的所有属性，p代表属性名
+		for(var p in alink) {
+			document.write("a."+p+"="+alink[p]+"<br/>")
+		}
 		</script> 
 	</body>
 </html>
+<!--
+	操作多个样式：
+	1.一个类
+	元素.className = "类名"
+	2.多个类
+	元素.className = "类名1 类名2"
+-->

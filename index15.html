@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">wwwwww</div>
+		<input type="button" value="show" id="btn"/>
+		<script type="text/javascript">
+			function show() {
+				var app = document.getElementById("app");
+				alert(app.innerText)
+			}
+			var btn = document.getElementById('btn');
+			btn.addEventListener("click",function(){
+				app.innerText ="show";
+			})
+		</script>
+		<!--第一种方式-->
+	</body>
+</html>
+<!--
+	第一种方式：
+	<input type="button" onclick="show()" value="show" id="btn"/>
+	第二种方式：
+	btn.onclick = function(){
+				var app = document.getElementById("app");
+				alert(app.innerText)
+			};
+	第三种方式：
+	btn.addEventListener("click",function(){
+				app.innerText ="show";
+			})
+	
+-->

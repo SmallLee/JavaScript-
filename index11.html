@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	
+		<script type="text/javascript">
+			document.write("<ul>")
+			for (var i = 0; i < 10; i++) {
+				document.write("<li>");
+				document.write("<input name='cbs' type='checkbox' value='多选框'/>不知道")
+				document.write("</li>");
+			}
+			document.write("</ul>")
+		</script>
+		<a href="javaScript:sAll()">全选</a>
+		<a href="javaScript:fAll()">反选</a>
+		<a href="javaScript:nAll()">全不选</a><br />
+		<label for="cb"><input id="cb" type="checkbox" onclick="selectAll()"/>选择全部</label>
+		<script type="text/javascript">
+			//返回类型是object NodeList
+			var checkboxList = document.getElementsByName("cbs")
+			function sAll(){
+				for (var i = 0; i < checkboxList.length; i++) {
+					checkboxList[i].checked = true;
+				}
+			}
+			function fAll(){
+				for (var i = 0; i < checkboxList.length; i++) {
+					checkboxList[i].checked = checkboxList[i].checked ? false : true;
+				}
+			}
+			function nAll(){
+					for (var i = 0; i < checkboxList.length; i++) {
+					checkboxList[i].checked = false;
+				}
+			}
+			function selectAll(){
+				for (var i = 0; i < checkboxList.length; i++) {
+					checkboxList[i].checked = checkboxList[i].checked ? false : true;
+				}
+			}
+		</script>
+	</body>
+</html>
+<!--
+	label需要把标签包起来才能起到效果
+	
+-->
