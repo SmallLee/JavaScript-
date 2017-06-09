@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body style="margin: 0;">
+		<div id="app" style="background: red;">aa</div>
+		<script type="text/javascript">
+		var app = document.getElementById("app");
+		function test(){
+			var x = event.clientX;
+			var y = event.clientY;
+			app.innerText = "x: "+x + "y: " + y
+		}
+		document.onmousemove = test;
+	</script>
+	</body>
+</html>

@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
-	</head>
-	<body>
-		<div id="app">wwwwww</div>
+	</head> 
+	<body oncontextmenu="show(this)">
+		<div id="app" oncontextmenu="show(this);return false">wwwwww</div>
 		<input type="button" value="show" id="btn"/>
 		<script type="text/javascript">
 			function show() {
@@ -16,6 +16,19 @@
 			btn.addEventListener("click",function(){
 				app.innerText ="show";
 			})
+			btn.addEventListener("mouseover",function(){
+				alert("mouseover")
+
+			});
+			function show(obj){
+
+			}
+			onunload=function () {
+				return "onunload"
+			} 
+			onbeforeunload = function(){
+				return "before"
+			}
 		</script>
 		<!--第一种方式-->
 	</body>
@@ -32,5 +45,13 @@
 	btn.addEventListener("click",function(){
 				app.innerText ="show";
 			})
+	oncontextmenu 事件在元素中用户右击鼠标时触发并打开上下文菜单。
 	
+	onload事件：
+	window.onload = function() {
+		
+	}
+	<body onload="js代码">
+		
+	</body>
 -->
