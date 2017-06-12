@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				border: 10px solid  red;
+				background: green;
+			}
+			html{
+				background: grey;
+			}
+		</style>
+	</head>
+	<body onclick="one()">
+		<img src="img/cat.jpg" onclick="two()" style="width: 100px;height: 100px;" />
+	</body>
+	<script type="text/javascript">
+		function one(){
+			alert('body click')
+		}
+		function two(){
+			alert('img click')
+			//事件不再向上传递
+			event.cancelBubble = true;
+		}
+	</script>
+</html>

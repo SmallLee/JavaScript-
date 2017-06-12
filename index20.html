@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.one{
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn" value="add" />
+	</body>
+	<script type="text/javascript">
+	var btn = document.getElementById('btn');
+	var down = false;
+	var dx = 0;
+	var dy = 0;
+	var sx = 0;
+	var sy = 0;
+	var d= null;
+	btn.onclick = function() {
+		if (d != null) {
+			return;
+		}
+		d = document.createElement('div');
+		//d.style.left要带px
+		d.style.left = "100px";
+		d.style.top = "40px";
+		d.style.background = "green";
+		d.style.width = "100px";
+		d.style.height = "30px"
+		d.className = "one";
+		document.body.appendChild(d)
+		//此处的onmousedown事件要放在click函数中，否则会报错
+		d.onmousedown = function(){
+			dx = event.clientX;
+			dy = event.clientY;
+			sx = parseInt(d.style.left);
+			sy = parseInt(d.style.top);
+			if (!down) {
+				down  = true;
+			}
+		}
+	}
+		document.onmousemove = function(e){
+			if (down) {
+				var ev = e || event;
+				d.style.top = ev.clientY - (dy - sy) + 'px';
+				d.style.left = ev.clientX - (dx - sx) + 'px';
+			}
+		}
+		document.onmouseup = function(){
+			if (down) {
+				down = false;
+			}
+		}
+	</script>
+</html>

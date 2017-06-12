@@ -11,9 +11,27 @@
 		function test(){
 			var x = event.clientX;
 			var y = event.clientY;
+//			var x = event.screenX;
+//			var y = event.screenY;
 			app.innerText = "x: "+x + "y: " + y
+			window.status = app.innerText;
+			document.title = app.innerText;
 		}
 		document.onmousemove = test;
+		window.document.onmousedown = function(e){
+			var ev = e ||  window.event;
+			alert(ev)
+		}
 	</script>
 	</body>
 </html>
+<!--
+	clientX:在浏览器窗口中的坐标
+	screenX:在屏幕中的坐标
+	document.title:当前网页的标题
+	window.status:状态栏
+	
+	兼容性问题：
+	ie中是event，火狐中通过函数参数传递过来的
+	var ev = e || event;
+-->
