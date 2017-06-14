@@ -5,9 +5,39 @@
 		<title></title>
 	</head>
 	<body>
+		<div id="one" style="position: absolute; background: red;width: 100px;height: 100px;left:0;top:0;"></div>
 		<script type="text/javascript">
-			var confim = window.confirm("去定要删除吗");
-			document.write(confim)
+//			var confim = window.confirm("去定要删除吗");
+//			document.write(confim)
+			var one = document.getElementById("one");
+			var x = 0;
+			var y = 0;
+			var xs = 10;
+			var ys = 10;
+			var flag = false;
+			var dt = setInterval(function(){
+				if (flag) {
+					return;
+				}
+				x += xs;
+				y += ys;
+				if (x >= document.body.clientWidth - one.offsetWidth || x <= 0) {
+
+					xs = -1 * xs;
+				}
+				if (y >= document.documentElement.clientHeight - one.offsetHeight || y <= 0) {
+
+					ys = -1 * ys;
+				}
+				one.style.left = x +'px';
+				one.style.top = y +'px';
+			},200);
+			one.onmouseover = function(){
+				flag = true;
+			}
+			one.onmouseout=function() {
+				flag = false;
+			}
 		</script>
 	</body>
 </html>
