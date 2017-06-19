@@ -2,8 +2,24 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<!--3秒刷新一次-->
+		<!--<meta http-equiv="refresh" content="3"/>-->
+		<!--3秒跳到百度-->
+		<!--<meta http-equiv="refresh" content="3;url='http:\\www.baidu.com'"/>-->
 		<title></title>
 	</head>
 	<body>
+		<script type="text/javascript">
+			setTimeout(function(){ 
+//				window.navigate('http://www.imooc.com/')
+//				window.location.href = "http://www.imooc.com";
+				location = "http://www.imooc.com"
+//				window.replace('');//没有后退按钮
+			},2000);
+		</script>
 	</body>
 </html>
+<!--
+	window.navigate只支持IE浏览器
+	window.reload:刷新
+-->

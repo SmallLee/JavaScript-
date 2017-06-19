@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/check.js"></script>
+		<style type="text/css">
+			.normal{
+				color: #ccc;
+			}
+			.error{
+				color: red;
+			}
+			.right{
+				color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post">
+			username:<input type="text" value="" name="username" id="username"/>
+			<span class="status">请输入用户名</span><br />
+			password:<input type="password" value="" name="password" id="password"/>
+			<span class="status">请输入密码</span><br />
+			repass:<input type="password" value="" name="repass" id="repass"/>
+			<span class="status">请确认密码</span><br />
+			email:<input type="text" value="" name="email" id="email"/>
+			<span class="status">请输入邮箱</span><br />
+			<input type="submit" name="" id="login" value="login" />
+		</form>
+	</body>
+</html>
+
+<!--
+	正则表达式：
+	\S 匹配任何可见字符
+	+ 一次或多次
+	
+-->
